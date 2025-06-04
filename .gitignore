@@ -1,0 +1,24 @@
+# Terraform files
+*.tfstate
+*.tfstate.backup
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+.tfplan
+
+# Local environment and credentials
+*.env
+.envrc
+.credentials
+.aws-sam/
+
+# Editor & system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
