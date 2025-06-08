@@ -40,3 +40,8 @@ variable "private-subnet-cidr-2" {
   description = "Required Public Subnet 2 CIDR, defualt name is '10.0.1.0/26'"
   default     = "10.0.1.0/26"
 }
+
+variable "aws_region" {
+  description = "The AWS region"
+  type        = string
+}
