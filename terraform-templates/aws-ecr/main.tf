@@ -3,5 +3,5 @@ module "ecr" {
 
   ecr_repo_name   = var.ecr_repo_name
   ecr_repo_env    = var.ecr_repo_env
-  tags            = var.tags
+ 
 }
