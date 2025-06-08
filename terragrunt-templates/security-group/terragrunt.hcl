@@ -2,22 +2,17 @@ terraform {
   source = "git::https://github.com/shubham-thaware/aws-infra-template.git//terraform-templates//aws-sg?ref=main"
 }
 
+# Declare dependency on the VPC module
 dependency "vpc" {
   config_path = "../vpc"
 
-#Mock outputs to avoid errors during plan if vpc is not created yet
+  # Mock outputs help avoid planning errors if VPC is not applied yet
   mock_outputs = {
     vpc_id = "mock-vpc-id"
   }
 }
-#adding locals
-locals {
-  vpc_id = dependency.vpc.outputs.vpc_id
-}
-#locals ends 
 
 inputs = {
-  #vpc_id    = dependency.vpc.outputs.vpc_id
-  vpc_id = local.vpc_id
-  aws_eks_cluster_name  = ""
+  vpc_id               = dependency.vpc.outputs.vpc_id
+  aws_eks_cluster_name = "" # Fill this if your SG needs to allow EKS-related traffic
 }
