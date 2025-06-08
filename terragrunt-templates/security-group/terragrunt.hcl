@@ -9,5 +9,5 @@ dependency "vpc" {
 
 inputs = {
   vpc_id               = dependency.vpc.outputs.vpc_id
-  aws_eks_cluster_name = "${EKS_CLUSTER_NAME}"
+  aws_eks_cluster_name = local.eks_cluster_name
 }
