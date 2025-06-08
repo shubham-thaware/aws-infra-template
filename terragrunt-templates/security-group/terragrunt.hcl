@@ -17,6 +17,7 @@ locals {
 #locals ends 
 
 inputs = {
-  vpc_id    = dependency.vpc.outputs.vpc_id
+  #vpc_id    = dependency.vpc.outputs.vpc_id
+  vpc_id = local.vpc_id
   aws_eks_cluster_name  = ""
 }
