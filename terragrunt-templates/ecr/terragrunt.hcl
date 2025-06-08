@@ -3,6 +3,6 @@ terraform {
 }
 
 inputs = {
-  ecr_repo_name     = ""
-  ecr_repo_env      = ""
+  ecr_repo_name     = "${ECR_NAME}"
+  ecr_repo_env      = "${ECR_ENV}"
 }
