@@ -11,15 +11,15 @@ dependency "security-group" {
 }
 
 inputs = {
-  aws_eks_cluster_name = "${EKS_CLUSTER_NAME}"
-  aws_eks_cluster_version = "${EKS_VERSION}"
-  vpc_id = dependency.vpc.outputs.vpc_id
-  aws_vpc_private_subnet_ids = dependency.vpc.outputs.private_subnet_ids
-  aws_eks_cluster_sg_ids = dependency.security-group.outputs.eks_cluster_sg_id
-  eks_desired_size  = "${EKS_DESIRED}"
-  eks_max_size = "${EKS_MAX}"
-  eks_min_size = "${EKS_MIN}"
-  eks_instance_type = "${EKS_INSTANCE_TYPE}"
-  eks_endpoint_private_access = "${EKS_PRIVATE_ACCESS}"
-  eks_endpoint_public_access = "${EKS_PUBLIC_ACCESS}"
+  aws_eks_cluster_name        = local.eks_cluster_name
+  aws_eks_cluster_version     = local.eks_cluster_version
+  vpc_id                      = dependency.vpc.outputs.vpc_id
+  aws_vpc_private_subnet_ids  = dependency.vpc.outputs.private_subnet_ids
+  aws_eks_cluster_sg_ids      = dependency.security-group.outputs.eks_cluster_sg_id
+  eks_desired_size            = local.eks_desired_size
+  eks_max_size                = local.eks_max_size
+  eks_min_size                = local.eks_min_size
+  eks_instance_type           = local.eks_instance_type
+  eks_endpoint_private_access = local.eks_endpoint_private_access
+  eks_endpoint_public_access  = local.eks_endpoint_public_access
 }
