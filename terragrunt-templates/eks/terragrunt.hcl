@@ -20,6 +20,6 @@ inputs = {
   eks_max_size = "${EKS_MAX}"
   eks_min_size = "${EKS_MIN}"
   eks_instance_type = "${EKS_INSTANCE_TYPE}"
-  eks_endpoint_private_access = ${EKS_PRIVATE_ACCESS}
-  eks_endpoint_public_access = ${EKS_PUBLIC_ACCESS}
+  eks_endpoint_private_access = "${EKS_PRIVATE_ACCESS}"
+  eks_endpoint_public_access = "${EKS_PUBLIC_ACCESS}"
 }
