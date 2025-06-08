@@ -5,11 +5,6 @@ terraform {
 # Declare dependency on the VPC module
 dependency "vpc" {
   config_path = "../vpc"
-
-  # Mock outputs help avoid planning errors if VPC is not applied yet
-  mock_outputs = {
-    vpc_id = "mock-vpc-id"
-  }
 }
 
 inputs = {
