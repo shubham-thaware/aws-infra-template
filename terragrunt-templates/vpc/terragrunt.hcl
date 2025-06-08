@@ -3,12 +3,12 @@ terraform {
 }
 
 inputs = {
-  env               = ""
-  vpc_name          = ""
-  vpc_cidr_block = "10.0.0.0/16"
-  public-subnet-cidr-1 = ""
-  public-subnet-cidr-2 = ""
-  private-subnet-cidr-1 = ""
-  private-subnet-cidr-2 = ""
+  env               = "${ENV}"
+  vpc_name          = ${ENV}-vpc"
+  vpc_cidr_block = "${VPC_CIDR}"
+  public-subnet-cidr-1 = "${PUB_SUBNET_1}"
+  public-subnet-cidr-2 = "${PUB_SUBNET_2}"
+  private-subnet-cidr-1 = "${PRIV_SUBNET_1}"
+  private-subnet-cidr-2 =  "${PRIV_SUBNET_2}"
   additional_tags = {}
 }
