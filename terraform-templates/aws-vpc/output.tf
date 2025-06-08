@@ -8,9 +8,9 @@ output "vpc_arn" {
 }
 
 output "private_subnet_ids" {
-  value = [module.vpc.private-subnet-1.id, module.aws_subnet.private-subnet-2.id]
+  value = [module.vpc.private-subnet-1.id, module.vpc.private-subnet-2.id]
 }
 
 output "public_subnet_ids" {
-  value = [module.vpc.public-subnet-1.id, module.aws_subnet.public-subnet-2.id]
+  value = [module.vpc.public-subnet-1.id, module.vpc.public-subnet-2.id]
 }
