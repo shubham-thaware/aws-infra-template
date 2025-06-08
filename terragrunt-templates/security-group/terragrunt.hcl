@@ -10,6 +10,12 @@ dependency "vpc" {
     vpc_id = "mock-vpc-id"
   }
 }
+#adding locals
+locals {
+  vpc_id = dependency.vpc.outputs.vpc_id
+}
+#locals ends 
+
 inputs = {
   vpc_id    = dependency.vpc.outputs.vpc_id
   aws_eks_cluster_name  = ""
