@@ -5,7 +5,7 @@ terraform {
 inputs = {
   env               = ""
   vpc_name          = ""
-  vpc_cidr_block    = ""
+  vpc_cidr_block = "10.0.0.0/16"
   public-subnet-cidr-1 = ""
   public-subnet-cidr-2 = ""
   private-subnet-cidr-1 = ""
