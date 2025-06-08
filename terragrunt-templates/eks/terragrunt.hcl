@@ -2,8 +2,12 @@ terraform {
   source = "git::https://github.com/shubham-thaware/aws-infra-template.git//terraform-templates//aws-eks?ref=main"
 }
 
-dependencies { 
-  paths = ["../vpc", "../security-group"]
+dependency "vpc" {  
+  config_path = "../vpc"
+}
+
+dependency "security-group" {  
+  config_path = "../security-group"
 }
 
 inputs = {
