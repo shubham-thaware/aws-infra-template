@@ -26,12 +26,12 @@ output "cluster_version" {
 
 output "cluster_iam_role_name" {
   description = "IAM role name of the EKS cluster."
-  value       = module.aws_iam_role.cluster.name 
+  value       = module.eks.cluster.name 
 }
 
 output "cluster_iam_role_arn" {
   description = "IAM role ARN of the EKS cluster."
-  value       = module.aws_iam_role.cluster.arn
+  value       = module.eks.cluster.arn
 }
 
 output "cluster_oidc_issuer_url" {
@@ -47,22 +47,22 @@ output "cluster_primary_security_group_id" {
 # EKS Node Group Outputs - Public
 output "node_group_public_id" {
   description = "Public Node Group ID"
-  value       = module.aws_eks_node_group.nodes.id
+  value       = module.eks.nodes.id
 }
 
 output "node_group_public_arn" {
   description = "Public Node Group ARN"
-  value       = module.aws_eks_node_group.nodes.arn
+  value       = module.eks.nodes.arn
 }
 
 output "node_group_public_status" {
   description = "Public Node Group status"
-  value       = module.aws_eks_node_group.nodes.status 
+  value       = module.eks.nodes.status 
 }
 
 output "node_group_public_version" {
   description = "Public Node Group Kubernetes Version"
-  value       = module.aws_eks_node_group.nodes.version
+  value       = module.eks.nodes.version
 }
 
 output "private_subnet_ids" {
