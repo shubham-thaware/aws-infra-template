@@ -41,7 +41,3 @@ variable "private-subnet-cidr-2" {
   default     = "10.0.1.0/26"
 }
 
-variable "aws_region" {
-  description = "The AWS region"
-  type        = string
-}
