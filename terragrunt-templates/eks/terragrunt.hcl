@@ -2,14 +2,6 @@ terraform {
   source = "git::https://github.com/shubham-thaware/aws-infra-template.git//terraform-templates//aws-eks?ref=main"
 }
 
-dependency "vpc" {  
-  config_path = "../vpc"
-}
-
-dependency "security-group" {  
-  config_path = "../security-group"
-}
-
 inputs = {
   aws_eks_cluster_name        = local.aws_eks_cluster_name
   aws_eks_cluster_version     = local.eks_cluster_version
