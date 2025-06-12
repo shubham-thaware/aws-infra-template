@@ -10,5 +10,5 @@ inputs = {
   public_subnet_cidr_2 = local.public_subnet_cidr_2
   private_subnet_cidr_1 = local.private_subnet_cidr_1
   private_subnet_cidr_2 = local.private_subnet_cidr_2
-  additional_tags = {}
+  #additional_tags = {}
 }
