@@ -7,5 +7,5 @@ module "vpc" {
   public-subnet-cidr-2 = var.public-subnet-cidr-2
   private-subnet-cidr-1 = var.private-subnet-cidr-1
   private-subnet-cidr-2 = var.private-subnet-cidr-2
-  additional_tags     = var.additional_tags
+  #additional_tags     = var.additional_tags
 }
