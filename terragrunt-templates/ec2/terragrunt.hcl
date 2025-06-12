@@ -2,14 +2,6 @@ terraform {
   source = "git::https://github.com/shubham-thaware/aws-infra-template.git//terraform-templates//aws-ec2?ref=main"
 }
 
-dependency "vpc" {  
-  config_path = "../vpc"
-}
-
-dependency "security-group" {  
-  config_path = "../security-group"
-}
-
 inputs = {
   vpc_id              = dependency.vpc.outputs.vpc_id
   public_subnet_id    = dependency.vpc.outputs.public_subnet_ids[0]
