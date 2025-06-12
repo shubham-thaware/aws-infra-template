@@ -10,6 +10,6 @@ inputs = {
   bastion_instance_type = local.bastion_instance_type
   ami_id              = local.ami_id
   db_instance_type    = local.db_instance_type
-  bastion_sg_id       = dependency.security-group.outputs.jump_sg_id
-  db_sg_id            = dependency.security-group.outputs.db_sg_id
+  bastion_sg_id       = dependency.sg.outputs.jump_sg_id
+  db_sg_id            = dependency.sg.outputs.db_sg_id
 }
