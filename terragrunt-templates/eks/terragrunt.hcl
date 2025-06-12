@@ -11,7 +11,7 @@ dependency "security-group" {
 }
 
 inputs = {
-  aws_eks_cluster_name        = local.eks_cluster_name
+  aws_eks_cluster_name        = local.aws_eks_cluster_name
   aws_eks_cluster_version     = local.eks_cluster_version
   vpc_id                      = dependency.vpc.outputs.vpc_id
   aws_vpc_private_subnet_ids  = dependency.vpc.outputs.private_subnet_ids
