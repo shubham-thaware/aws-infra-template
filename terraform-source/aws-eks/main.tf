@@ -1,6 +1,6 @@
 module "eks" {
   source = "git::https://github.com/shubham-thaware/terraform-module.git//aws-eks"
-
+  aws_region                 = var.aws_region
   aws_eks_cluster_name       = var.aws_eks_cluster_name
   aws_eks_cluster_version    = var.aws_eks_cluster_version
   vpc_id                     = var.vpc_id
