@@ -41,10 +41,22 @@ module "eks" {
   vpc_id = module.vpc.vpc_id
   aws_vpc_private_subnet_ids = module.vpc.private_subnet_ids
   aws_eks_cluster_sg_ids = [module.sg.eks_cluster_sg_id]
-  eks_desired_size = var.eks_desired_size
-  eks_max_size = var.eks_max_size
-  eks_min_size = var.eks_min_size
-  eks_instance_type = var.eks_node_type
+  cluster_endpoint_public_access_cidrs = var.cluster_endpoint_public_access_cidrs
   eks_endpoint_private_access = var.eks_private_access
-  eks_endpoint_public_access = var.eks_public_access
+  eks_endpoint_public_access = var.eks_endpoint_public_access
+  default_tags = var.default_tags
+  node_instance_type = var.node_instance_type
+  node_volume_size = var.node_volume_size
+  node_desired  = var.node_desired
+  node_min  = var.node_min
+  node_max  = var.node_max
+  create_spot_node_group = var.create_spot_node_group
+  spot_instance_types = var.spot_instance_types
+  spot_desired_size = var.spot_desired_size
+  spot_min_size  = var.spot_min_size
+  spot_max_size = var.spot_max_size
+  node_labels = var.node_labels
+  control_plane_log_types = var.control_plane_log_types
+  enable_kms = var.enable_kms
+  ebs_csi_version = var.ebs_csi_version
 }
