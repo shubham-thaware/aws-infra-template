@@ -36,26 +36,6 @@ variable "cluster_endpoint_public_access_cidrs" {
   default     = ["0.0.0.0/0"]
 }
 
-variable "eks_desired_size" {
-  description = "Desired number of nodes in the EKS Node Group"
-  type        = number
-}
-
-variable "eks_max_size" {
-  description = "Maximum number of nodes in the EKS Node Group"
-  type        = number
-}
-
-variable "eks_min_size" {
-  description = "Minimum number of nodes in the EKS Node Group"
-  type        = number
-}
-
-variable "eks_instance_type" {
-  description = "Instance type for EKS Node Group"
-  type        = string
-}
-
 variable "eks_endpoint_private_access" {
   description = "Enable private access to EKS API server"
   type        = bool
@@ -64,4 +44,42 @@ variable "eks_endpoint_private_access" {
 variable "eks_endpoint_public_access" {
   description = "Enable public access to EKS API server"
   type        = bool
+}
+
+variable "enable_kms" {
+  type    = bool
+  default = false
+}
+
+variable "node_labels" {
+  type = map(string)
+  default = {
+    role = "worker",
+    env  = "dev"
+  }
+}
+
+variable "node_instance_type" {
+  type    = string
+  default = "t3.medium"
+}
+
+variable "node_volume_size" {
+  type    = number
+  default = 20
+}
+
+variable "node_desired" {
+  type    = number
+  default = 2
+}
+
+variable "node_min" {
+  type    = number
+  default = 1
+}
+
+variable "node_max" {
+  type    = number
+  default = 4
 }
