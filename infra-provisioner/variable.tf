@@ -142,11 +142,7 @@ variable "enable_kms" {
   type    = bool
   default = false
 }
-variable "ebs_csi_version" {
-  description = "Pinned version of EBS CSI Driver"
-  type        = string
-  default     = "v1.31.0-eksbuild.1"
-}
+
 variable "eks_endpoint_private_access" {
   description = "Enable private access to EKS API server"
   type        = bool
