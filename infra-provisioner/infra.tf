@@ -42,7 +42,7 @@ module "eks" {
   aws_vpc_private_subnet_ids = module.vpc.private_subnet_ids
   aws_eks_cluster_sg_ids = [module.sg.eks_cluster_sg_id]
   cluster_endpoint_public_access_cidrs = var.cluster_endpoint_public_access_cidrs
-  eks_endpoint_private_access = var.eks_private_access
+  eks_endpoint_private_access = var.eks_endpoint_private_access
   eks_endpoint_public_access = var.eks_endpoint_public_access
   default_tags = var.default_tags
   node_instance_type = var.node_instance_type
