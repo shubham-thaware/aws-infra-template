@@ -58,5 +58,4 @@ module "eks" {
   node_labels = var.node_labels
   control_plane_log_types = var.control_plane_log_types
   enable_kms = var.enable_kms
-  ebs_csi_version = var.ebs_csi_version
 }
