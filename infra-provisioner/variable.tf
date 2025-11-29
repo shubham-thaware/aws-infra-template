@@ -38,11 +38,6 @@ variable "eks_version" {
   type = string
 }
 
-variable "eks_private_access" {
-  description = "Specify whether to enable EKS endpoint private access"
-  type = bool
-}
-
 variable "ami_id" {
   description = "Provide the AMI ID for the EC2 instance"
   type = string
